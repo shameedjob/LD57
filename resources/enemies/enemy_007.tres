@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyTeamResource" load_steps=5 format=3 uid="uid://cn3qsxfdlfwi2"]
+
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="1_xjxp0"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_kkgf5"]
+[ext_resource type="Resource" uid="uid://b4acde3ihhvm6" path="res://resources/units/011_starfish/unit_011_starfish.tres" id="3_42v15"]
+[ext_resource type="Resource" uid="uid://gh6mkal4wjec" path="res://resources/units/002_swordfish/unit_002_swordfish.tres" id="4_hcnrw"]
+
+[resource]
+script = ExtResource("1_xjxp0")
+name = ""
+team = Array[ExtResource("2_kkgf5")]([ExtResource("3_42v15"), ExtResource("4_hcnrw"), ExtResource("4_hcnrw")])
+team_levels = Array[int]([1, 1, 1, 1])
+level_min = 7
+level_max = 8

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cs8l8x6asbvlv"]
+
+[ext_resource type="JSON" path="res://resources/units/008_betta/betta.json" id="1_21ron"]
+[ext_resource type="Script" path="res://resources/units/008_betta/betta_resource.gd" id="1_xvnmm"]
+[ext_resource type="Texture2D" uid="uid://dwi3rwt07mw8j" path="res://resources/units/008_betta/betta.png" id="3_od4mg"]
+
+[resource]
+script = ExtResource("1_xvnmm")
+name = &"Betta"
+oxygen_cost = 1
+tier = 2
+data = ExtResource("1_21ron")
+sprite = ExtResource("3_od4mg")
+level = 1
+edible = true
+description = "When attacked, has a {chance_h} in {chance_t} chance to gain {oxygen} (O)."
+eye_pos = Vector2(16, -7)

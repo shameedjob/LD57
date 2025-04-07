@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://b535dg0hlslqt"]
+
+[ext_resource type="JSON" path="res://resources/units/001_clam/clam.json" id="1_iigty"]
+[ext_resource type="Script" path="res://resources/units/001_clam/clam_resource.gd" id="2_le1r8"]
+[ext_resource type="Texture2D" uid="uid://cn0qg5nswg00m" path="res://resources/units/001_clam/clam.png" id="3_mlx3n"]
+
+[resource]
+script = ExtResource("2_le1r8")
+name = &"Clam"
+oxygen_cost = 2
+tier = 1
+data = ExtResource("1_iigty")
+sprite = ExtResource("3_mlx3n")
+level = 1
+edible = true
+description = "On death: gain {gain}"
+eye_pos = Vector2(-17, 0)

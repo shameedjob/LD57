@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bpt17g6uqgml8"]
+
+[ext_resource type="JSON" path="res://resources/units/007_goldfish/goldfish.json" id="1_ghq0s"]
+[ext_resource type="Script" path="res://resources/units/007_goldfish/goldfish_resource.gd" id="2_chtkv"]
+[ext_resource type="Texture2D" uid="uid://c68km6tik0gxw" path="res://resources/units/007_goldfish/goldfish.png" id="3_uukrx"]
+
+[resource]
+script = ExtResource("2_chtkv")
+name = &"Goldfish"
+oxygen_cost = 1
+tier = 2
+data = ExtResource("1_ghq0s")
+sprite = ExtResource("3_uukrx")
+level = 1
+edible = true
+description = "After winning, has a {chance_h} in {chance_t} chance to gain ${gain}."
+eye_pos = Vector2(3, -22)

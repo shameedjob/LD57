@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://duprhswdpyyi4"]
+
+[ext_resource type="Script" path="res://utilities/dev console/DevConsole.gd" id="1_wopck"]
+
+[node name="DevConsole" type="CanvasLayer" node_paths=PackedStringArray("text_input", "text_holder", "text_prefab")]
+layer = 128
+script = ExtResource("1_wopck")
+text_input = NodePath("ColorRect/CommandInput")
+text_holder = NodePath("ColorRect/ScrollContainer/TextHolder")
+text_prefab = NodePath("ColorRect/ScrollContainer/TextHolder/TextLine")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.423529)
+metadata/_edit_use_anchors_ = true
+
+[node name="CommandInput" type="LineEdit" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Enter command..."
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextHolder" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="TextLine" type="RichTextLabel" parent="ColorRect/ScrollContainer/TextHolder"]
+visible = false
+custom_minimum_size = Vector2(640, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+bbcode_enabled = true
+text = "command line
+"
+fit_content = true
+scroll_active = false

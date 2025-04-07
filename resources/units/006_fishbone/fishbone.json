@@ -1,0 +1,14 @@
+{
+	"1": {
+		"chance_h": 1,
+		"chance_t": 4
+	},
+	"2": {
+		"chance_h": 2,
+		"chance_t": 4
+	},
+	"3": {
+		"chance_h": 3,
+		"chance_t": 4
+	}
+}

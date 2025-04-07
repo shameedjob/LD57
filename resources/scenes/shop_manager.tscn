@@ -1,0 +1,276 @@
+[gd_scene load_steps=17 format=3 uid="uid://cxcshee5mvfav"]
+
+[ext_resource type="Script" path="res://resources/scenes/shop_manager.gd" id="1_057fg"]
+[ext_resource type="Script" path="res://utilities/ui_interactable_text_button.gd" id="1_jnooy"]
+[ext_resource type="Texture2D" uid="uid://cdsvkedavnntb" path="res://sprites/container.png" id="2_jfiuf"]
+[ext_resource type="Texture2D" uid="uid://d3w8npc8xvtr3" path="res://sprites/shop_temp.png" id="3_va2hm"]
+[ext_resource type="Material" uid="uid://c1hpi54ggsfek" path="res://resources/scenes/inventory_item.tres" id="5_8qmhr"]
+[ext_resource type="Texture2D" uid="uid://ntfvuov0y5uj" path="res://sprites/can_bg.png" id="5_dn33b"]
+[ext_resource type="Texture2D" uid="uid://c75skost88p2s" path="res://sprites/rope.png" id="6_o2io4"]
+[ext_resource type="Texture2D" uid="uid://3hj3wf20c6ew" path="res://sprites/can_fg.png" id="8_ysbhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yk628"]
+size = Vector2(636, 255)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6tv0"]
+size = Vector2(928, 227)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vjrr"]
+size = Vector2(256, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpknb"]
+size = Vector2(8, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo25s"]
+size = Vector2(8, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_keiuc"]
+size = Vector2(256, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpkma"]
+size = Vector2(487, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q530"]
+size = Vector2(926.5, 61)
+
+[node name="ShopManager" type="Node2D"]
+script = ExtResource("1_057fg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 117.0
+offset_right = -561.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShopPanel" type="Panel" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/ShopPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 19.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center]Shop"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/ShopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxPanel" type="Panel" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/BoxPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 19.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center]Box"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/BoxPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanPanel" type="Panel" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/CanPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 19.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center]Can"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer/CanPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GoButton" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -123.0
+offset_right = -4.0
+offset_bottom = -79.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+texture = ExtResource("2_jfiuf")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+script = ExtResource("1_jnooy")
+template = "[center][font_size=36][outline_color=black][outline_size=22]{0}"
+text = "GO"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/GoButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][font_size=36][outline_color=black][outline_size=22]GO"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_va2hm")
+
+[node name="ShopArea2D" type="Area2D" parent="."]
+position = Vector2(-409, -168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopArea2D"]
+position = Vector2(82, 0)
+shape = SubResource("RectangleShape2D_yk628")
+debug_color = Color(0.998565, 0.90137, 0, 0.42)
+
+[node name="CrewArea" type="Area2D" parent="."]
+position = Vector2(-204, 154)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrewArea"]
+position = Vector2(23, -49.5)
+shape = SubResource("RectangleShape2D_i6tv0")
+debug_color = Color(0.69183, 0.798275, 0.972109, 0.42)
+
+[node name="Can" type="Sprite2D" parent="."]
+position = Vector2(457, 126)
+texture = ExtResource("5_dn33b")
+
+[node name="CanArea" type="Area2D" parent="Can"]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Can/CanArea"]
+shape = SubResource("RectangleShape2D_7vjrr")
+debug_color = Color(0, 0.92076, 0.772212, 0.42)
+
+[node name="rwall" type="StaticBody2D" parent="Can"]
+position = Vector2(132, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Can/rwall"]
+shape = SubResource("RectangleShape2D_mpknb")
+
+[node name="lwall" type="StaticBody2D" parent="Can"]
+position = Vector2(-132, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Can/lwall"]
+shape = SubResource("RectangleShape2D_lo25s")
+
+[node name="twall" type="StaticBody2D" parent="Can"]
+position = Vector2(0, 84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Can/twall"]
+shape = SubResource("RectangleShape2D_keiuc")
+
+[node name="bwall" type="StaticBody2D" parent="Can"]
+position = Vector2(0, -84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Can/bwall"]
+shape = SubResource("RectangleShape2D_keiuc")
+
+[node name="RopeLine" type="Line2D" parent="Can"]
+z_index = -1
+texture_repeat = 2
+material = ExtResource("5_8qmhr")
+points = PackedVector2Array(0, -1000, 0, 0)
+texture = ExtResource("6_o2io4")
+texture_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Can"]
+z_index = 2
+texture = ExtResource("8_ysbhn")
+
+[node name="StaticNodes" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticNodes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticNodes/StaticBody2D"]
+position = Vector2(-400.5, -13.5)
+shape = SubResource("RectangleShape2D_cpkma")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticNodes/StaticBody2D"]
+position = Vector2(-176.25, 247)
+shape = SubResource("RectangleShape2D_0q530")
+
+[node name="Crew" type="Node2D" parent="."]
+
+[node name="RopeLine" type="Line2D" parent="."]
+texture_repeat = 2
+material = ExtResource("5_8qmhr")
+position = Vector2(463, 79)
+points = PackedVector2Array(-1152, -126)
+texture = ExtResource("6_o2io4")
+texture_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -546.0
+offset_top = -340.0
+offset_right = -199.0
+offset_bottom = -300.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=36][outline_color=black][outline_size=22][center]SHOP ($3 each)"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -619.0
+offset_top = 5.0
+offset_right = -272.0
+offset_bottom = 69.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=36][outline_color=black][outline_size=22]Crew ($1 Sell)"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 305.0
+offset_top = -14.0
+offset_right = 652.0
+offset_bottom = 50.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][font_size=36][outline_color=black][outline_size=22]Ship"
+fit_content = true
+
+[connection signal="click" from="CanvasLayer/GoButton" to="." method="_on_go_button_click"]
+[connection signal="mouse_entered" from="ShopArea2D" to="." method="shop_enter"]
+[connection signal="mouse_exited" from="ShopArea2D" to="." method="shop_exit"]
+[connection signal="mouse_entered" from="CrewArea" to="." method="crew_enter"]
+[connection signal="mouse_exited" from="CrewArea" to="." method="crew_exit"]
+[connection signal="mouse_entered" from="Can/CanArea" to="." method="can_enter"]
+[connection signal="mouse_exited" from="Can/CanArea" to="." method="can_exit"]

@@ -1,0 +1,143 @@
+[gd_scene load_steps=44 format=3 uid="uid://crcfy2ws8b3rm"]
+
+[ext_resource type="Script" path="res://resources/scenes/game_manager.gd" id="1_sglne"]
+[ext_resource type="PackedScene" uid="uid://b3lnpuakhtd3f" path="res://resources/scenes/battle_window.tscn" id="2_btafw"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_dspgp"]
+[ext_resource type="Resource" uid="uid://b535dg0hlslqt" path="res://resources/units/001_clam/unit_001_clam.tres" id="3_3o2q3"]
+[ext_resource type="Resource" uid="uid://gh6mkal4wjec" path="res://resources/units/002_swordfish/unit_002_swordfish.tres" id="4_ox11v"]
+[ext_resource type="Resource" uid="uid://dticbxkgsslxy" path="res://resources/units/003_minnow/unit_003_minnow.tres" id="5_557xu"]
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="5_p0pec"]
+[ext_resource type="Resource" uid="uid://rd5li52py55a" path="res://resources/units/004_dolphin/unit_004_dolphin.tres" id="6_0bw7w"]
+[ext_resource type="Resource" uid="uid://ki4sjuocq01f" path="res://resources/enemies/enemy_001.tres" id="6_i6qor"]
+[ext_resource type="Resource" uid="uid://c0mej5ssg4drm" path="res://resources/units/005_clownfish/unit_005_clownfish.tres" id="7_k36jo"]
+[ext_resource type="Resource" uid="uid://dtccofoxw55tk" path="res://resources/units/006_fishbone/unit_006_fishbone.tres" id="8_3mss2"]
+[ext_resource type="Resource" uid="uid://bpt17g6uqgml8" path="res://resources/units/007_goldfish/unit_007_goldfish.tres" id="9_xlwyp"]
+[ext_resource type="Resource" uid="uid://cs8l8x6asbvlv" path="res://resources/units/008_betta/unit_008_betta.tres" id="10_u84pc"]
+[ext_resource type="Resource" uid="uid://d3esi1dyjpd6m" path="res://resources/units/009_piranha/unit_009_piranha.tres" id="11_fniu6"]
+[ext_resource type="Resource" uid="uid://dl0oivlrqsqox" path="res://resources/units/010_hammerhead/unit_010_hammerhead.tres" id="12_43w4b"]
+[ext_resource type="Resource" uid="uid://b4acde3ihhvm6" path="res://resources/units/011_starfish/unit_011_starfish.tres" id="13_45v2n"]
+[ext_resource type="Resource" uid="uid://buyimnsuil286" path="res://resources/units/012_pufferfish/unit_012_pufferfish.tres" id="14_w3ypx"]
+[ext_resource type="Resource" uid="uid://ush8e1gx1iv1" path="res://resources/units/013_octopus/unit_013_octopus.tres" id="15_4rfue"]
+[ext_resource type="Resource" uid="uid://bys1w8mwx01t2" path="res://resources/units/014_shark/unit_014_shark.tres" id="16_imtlj"]
+[ext_resource type="Resource" uid="uid://nkjmyiaiitm0" path="res://resources/units/015_cuckoo_catfish/unit_015_cuckoo_catfish.tres" id="17_6bs5m"]
+[ext_resource type="Resource" uid="uid://hrvq8ovnwquy" path="res://resources/units/016_angelfish/unit_016_angelfish.tres" id="18_mm6la"]
+[ext_resource type="Resource" uid="uid://dbd48rr10seh2" path="res://resources/units/017_angler/unit_017_angler.tres" id="19_p662n"]
+[ext_resource type="Resource" uid="uid://cfxct1epdkffu" path="res://resources/units/018_stingray/unit_018_stingray.tres" id="20_kwklg"]
+[ext_resource type="Resource" uid="uid://duejk1ggfb6fg" path="res://resources/units/019_narwhal/unit_019_narwhal.tres" id="21_rbfmd"]
+[ext_resource type="Resource" uid="uid://x043j7pi1rjd" path="res://resources/units/020_whale/unit_020_whale.tres" id="22_uwybv"]
+[ext_resource type="Resource" uid="uid://dqunuw5xstwio" path="res://resources/units/021_hippocampus/unit_021_hippocampus.tres" id="23_3th6a"]
+[ext_resource type="Resource" uid="uid://c5bvckb61cucq" path="res://resources/units/022_nessy/unit_022_nessy.tres" id="24_0g27x"]
+[ext_resource type="Resource" uid="uid://owdfr0kjsglk" path="res://resources/units/023_kraken/unit_023_kraken.tres" id="25_pytpn"]
+[ext_resource type="Resource" uid="uid://b5s85rgq5j2k6" path="res://resources/enemies/enemy_002.tres" id="28_e2tp7"]
+[ext_resource type="Resource" uid="uid://bh0bdm536j705" path="res://resources/enemies/enemy_003.tres" id="29_nncpd"]
+[ext_resource type="Resource" uid="uid://bowu1cmigjkhw" path="res://resources/enemies/enemy_004.tres" id="30_bf3uo"]
+[ext_resource type="Resource" uid="uid://bs3rnpnfqrqeq" path="res://resources/enemies/enemy_005.tres" id="31_4guob"]
+[ext_resource type="Resource" uid="uid://bvnaxaaad4l2a" path="res://resources/enemies/enemy_006.tres" id="32_40dek"]
+[ext_resource type="Resource" uid="uid://cn3qsxfdlfwi2" path="res://resources/enemies/enemy_007.tres" id="33_5wva4"]
+[ext_resource type="Resource" uid="uid://b3uj6fwoyo20o" path="res://resources/enemies/enemy_008.tres" id="34_xfnl6"]
+[ext_resource type="Resource" uid="uid://bm3y2cp1w4h5a" path="res://resources/enemies/enemy_009.tres" id="35_3im5n"]
+[ext_resource type="Resource" uid="uid://j6jwl627oiib" path="res://resources/enemies/enemy_boss_001.tres" id="36_y5b1u"]
+[ext_resource type="Resource" uid="uid://b40ba0d6cu85a" path="res://resources/enemies/enemy_boss_002.tres" id="37_uomfc"]
+[ext_resource type="Resource" uid="uid://opqjcvwfmoe2" path="res://resources/enemies/enemy_boss_003.tres" id="38_ndsnk"]
+[ext_resource type="PackedScene" uid="uid://cpyomkb8blefa" path="res://resources/scenes/beffrey_control.tscn" id="40_xj4lm"]
+[ext_resource type="Shader" path="res://resources/materials/water.gdshader" id="41_5oyiu"]
+[ext_resource type="AudioStream" uid="uid://58stcjapdt6b" path="res://resources/audio/beach_vibes.mp3" id="42_dpvhd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m62gm"]
+shader = ExtResource("41_5oyiu")
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_sglne")
+all_crew = Array[ExtResource("2_dspgp")]([ExtResource("3_3o2q3"), ExtResource("4_ox11v"), ExtResource("5_557xu"), ExtResource("6_0bw7w"), ExtResource("7_k36jo"), ExtResource("8_3mss2"), ExtResource("9_xlwyp"), ExtResource("10_u84pc"), ExtResource("11_fniu6"), ExtResource("12_43w4b"), ExtResource("13_45v2n"), ExtResource("14_w3ypx"), ExtResource("15_4rfue"), ExtResource("16_imtlj"), ExtResource("17_6bs5m"), ExtResource("18_mm6la"), ExtResource("19_p662n"), ExtResource("20_kwklg"), ExtResource("21_rbfmd"), ExtResource("22_uwybv"), ExtResource("23_3th6a"), ExtResource("24_0g27x"), ExtResource("25_pytpn")])
+all_enemies = Array[ExtResource("5_p0pec")]([ExtResource("6_i6qor"), ExtResource("28_e2tp7"), ExtResource("29_nncpd"), ExtResource("30_bf3uo"), ExtResource("31_4guob"), ExtResource("32_40dek"), ExtResource("33_5wva4"), ExtResource("34_xfnl6"), ExtResource("35_3im5n"), ExtResource("36_y5b1u"), ExtResource("37_uomfc"), ExtResource("38_ndsnk")])
+
+[node name="Beffrey" parent="." instance=ExtResource("40_xj4lm")]
+offset_left = 256.0
+offset_top = -167.0
+offset_right = 256.0
+offset_bottom = -167.0
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="BattleWindow" parent="Canvas" instance=ExtResource("2_btafw")]
+mouse_filter = 2
+
+[node name="RoundText" type="RichTextLabel" parent="Canvas"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -40.0
+offset_right = 116.0
+grow_horizontal = 2
+grow_vertical = 0
+bbcode_enabled = true
+text = "[center][font_size=24]Round 0/10"
+fit_content = true
+
+[node name="Fade" type="ColorRect" parent="Canvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WinText" type="RichTextLabel" parent="Canvas/Fade"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.5
+offset_top = -48.0
+offset_right = 183.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][font_size=36] You have WON!
+
+[font_size=24]Press enter to RESTART"
+fit_content = true
+
+[node name="LoseText" type="RichTextLabel" parent="Canvas/Fade"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.5
+offset_top = -48.0
+offset_right = 183.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][font_size=36] You have LOST!
+
+[font_size=24]Press enter to RESTART"
+fit_content = true
+
+[node name="Water" type="Polygon2D" parent="."]
+z_index = -10
+material = SubResource("ShaderMaterial_m62gm")
+position = Vector2(0, 800)
+color = Color(0.253767, 0.351666, 0.749624, 1)
+polygon = PackedVector2Array(0, 0, 1280, 0, 1280, 960, 0, 960)
+
+[node name="Camera" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_dpvhd")
+volume_db = -9.369
+autoplay = true

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dqunuw5xstwio"]
+
+[ext_resource type="Script" path="res://resources/units/021_hippocampus/hippocampus_resource.gd" id="1_elu0k"]
+[ext_resource type="JSON" path="res://resources/units/021_hippocampus/hippocampus.json" id="1_lwn87"]
+[ext_resource type="Texture2D" uid="uid://dt6ob0hnotaju" path="res://resources/units/021_hippocampus/hippocampus.PNG" id="3_tqc2d"]
+
+[resource]
+script = ExtResource("1_elu0k")
+name = &"Hippocampus"
+oxygen_cost = 0
+tier = 5
+data = ExtResource("1_lwn87")
+sprite = ExtResource("3_tqc2d")
+level = 1
+edible = true
+description = "This graceful creature should not exist..."
+eye_pos = Vector2(14, -17)

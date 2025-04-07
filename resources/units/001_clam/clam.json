@@ -1,0 +1,11 @@
+{
+	"1":{
+		"gain": "$1"
+	},
+	"2":{
+		"gain": "a random ally, at your tier, in your inventory."
+	},
+	"3":{
+		"gain": "a random ally, at a stronger tier, in your inventory."
+	}
+}

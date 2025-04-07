@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbovj35opfsi2"]
+
+[ext_resource type="Script" path="res://scripts/crew_object.gd" id="1_peag1"]
+[ext_resource type="Material" uid="uid://c1hpi54ggsfek" path="res://resources/scenes/inventory_item.tres" id="2_e8s2r"]
+[ext_resource type="Script" path="res://utilities/TooltipSub.gd" id="3_54l7b"]
+[ext_resource type="Texture2D" uid="uid://cn0qg5nswg00m" path="res://resources/units/001_clam/clam.png" id="3_prawi"]
+[ext_resource type="Texture2D" uid="uid://ckgqy50ivp617" path="res://sprites/eyes.png" id="4_pjqvt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yoxm0"]
+radius = 32.0
+
+[node name="Crew" type="RigidBody2D"]
+input_pickable = true
+lock_rotation = true
+script = ExtResource("1_peag1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, -2)
+shape = SubResource("CircleShape2D_yoxm0")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+material = ExtResource("2_e8s2r")
+position = Vector2(-12, 0)
+texture = ExtResource("3_prawi")
+
+[node name="EyeSprite" type="Sprite2D" parent="Sprite"]
+use_parent_material = true
+position = Vector2(12, 0)
+texture = ExtResource("4_pjqvt")
+
+[node name="TooltipSub" type="Node" parent="." node_paths=PackedStringArray("detection_area")]
+script = ExtResource("3_54l7b")
+detection_area = NodePath("..")

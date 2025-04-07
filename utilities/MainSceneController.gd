@@ -1,0 +1,2 @@
+class_name MainSceneController
+static var instance:MainSceneController

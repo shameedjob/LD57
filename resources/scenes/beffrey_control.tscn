@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpyomkb8blefa"]
+
+[ext_resource type="Script" path="res://scripts/beffrey_controller.gd" id="1_31b2y"]
+[ext_resource type="PackedScene" uid="uid://ma7q8gfdgrbh" path="res://resources/scenes/beffrey.tscn" id="2_jlunl"]
+[ext_resource type="Texture2D" uid="uid://bk3trisu02c36" path="res://sprites/beffrey1.png" id="2_txjdf"]
+[ext_resource type="Texture2D" uid="uid://dr88a3qteqxt3" path="res://sprites/beffrey2.png" id="3_2nsmf"]
+[ext_resource type="AudioStream" uid="uid://cqtw0wy0pyj71" path="res://resources/audio/beffrey.mp3" id="3_gpvrp"]
+[ext_resource type="Texture2D" uid="uid://cr1s5vqo0n3lp" path="res://sprites/beffrey3.png" id="4_yj0rn"]
+[ext_resource type="Texture2D" uid="uid://b4hk8uxshatj4" path="res://sprites/beffrey4.png" id="5_yohyy"]
+[ext_resource type="Material" uid="uid://c1hpi54ggsfek" path="res://resources/scenes/inventory_item.tres" id="7_16mmn"]
+[ext_resource type="Texture2D" uid="uid://cdsvkedavnntb" path="res://sprites/container.png" id="8_lyr3n"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8gm10"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Beffrey" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_31b2y")
+base_texture = ExtResource("2_txjdf")
+talking_texture = Array[Texture2D]([ExtResource("2_txjdf"), ExtResource("3_2nsmf"), ExtResource("4_yj0rn"), ExtResource("5_yohyy")])
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(256, 256)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.80573)
+projection = 1
+size = 5.0
+
+[node name="beffrey" parent="SubViewport" instance=ExtResource("2_jlunl")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.384118, 0.923284, 0, -0.923284, 0.384118, 0, 0, 0)
+
+[node name="View" type="TextureRect" parent="."]
+material = ExtResource("7_16mmn")
+layout_mode = 0
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = SubResource("ViewportTexture_8gm10")
+
+[node name="TextContainer" type="Control" parent="View"]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="View/TextContainer"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=16][color=black]Hello 
+"
+fit_content = true
+
+[node name="ColorRect2" type="NinePatchRect" parent="View/TextContainer/RichTextLabel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_lyr3n")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gpvrp")

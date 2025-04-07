@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://c1hpi54ggsfek"]
+
+[ext_resource type="Shader" path="res://resources/scenes/3d_space.gdshader" id="1_lr8fy"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_n1ppn"]
+frequency = 0.0157
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ysvsl"]
+width = 80
+height = 80
+noise = SubResource("FastNoiseLite_n1ppn")
+
+[resource]
+shader = ExtResource("1_lr8fy")
+shader_parameter/offset = Vector2(3, 3)
+shader_parameter/modulate = null
+shader_parameter/distortion_strength = 1.0
+shader_parameter/speed = 10.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_ysvsl")

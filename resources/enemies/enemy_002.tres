@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyTeamResource" load_steps=4 format=3 uid="uid://b5s85rgq5j2k6"]
+
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="1_267wr"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_1l4q8"]
+[ext_resource type="Resource" uid="uid://dticbxkgsslxy" path="res://resources/units/003_minnow/unit_003_minnow.tres" id="3_eqs4w"]
+
+[resource]
+script = ExtResource("1_267wr")
+name = "Minnow Men"
+team = Array[ExtResource("2_1l4q8")]([ExtResource("3_eqs4w"), ExtResource("3_eqs4w"), ExtResource("3_eqs4w")])
+team_levels = Array[int]([1, 1, 1, 1])
+level_min = 1
+level_max = 2

@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://8wjugbmty16y"]
+
+[ext_resource type="Script" path="res://can_game_dev_console.gd" id="1_yuhcc"]
+
+[node name="DevConsole" type="CanvasLayer" node_paths=PackedStringArray("text_input", "text_holder", "text_prefab")]
+visible = false
+script = ExtResource("1_yuhcc")
+text_input = NodePath("Panel/LineEdit")
+text_holder = NodePath("Panel/ScrollContainer/VFlowContainer")
+text_prefab = NodePath("Panel/ScrollContainer/VFlowContainer/RichTextLabel")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VFlowContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/ScrollContainer/VFlowContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+bbcode_enabled = true
+text = "adsdsdsda"
+fit_content = true
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0

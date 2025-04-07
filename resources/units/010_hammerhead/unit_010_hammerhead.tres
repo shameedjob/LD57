@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dl0oivlrqsqox"]
+
+[ext_resource type="JSON" path="res://resources/units/010_hammerhead/hammerhead.json" id="1_ulw04"]
+[ext_resource type="Script" path="res://resources/units/010_hammerhead/hammerhead_resource.gd" id="2_1bu0m"]
+[ext_resource type="Texture2D" uid="uid://bec3s5thjli7u" path="res://resources/units/010_hammerhead/hammerhead.png" id="3_5x7ye"]
+
+[resource]
+script = ExtResource("2_1bu0m")
+damage = 1
+chance_h = 1
+chance_t = 1
+name = &"Hammerhead"
+oxygen_cost = 2
+tier = 2
+data = ExtResource("1_ulw04")
+sprite = ExtResource("3_5x7ye")
+level = 1
+edible = true
+description = "Each turn, attacks for {damage} (O) for each empty enemy space. "
+eye_pos = Vector2(13, -14)

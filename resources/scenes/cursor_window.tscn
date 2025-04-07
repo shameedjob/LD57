@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv5t2ykgyixte"]
+
+[ext_resource type="Script" path="res://utilities/custom_cursor.gd" id="1_d0ij2"]
+[ext_resource type="Texture2D" uid="uid://cn1d4qxlglnoq" path="res://sprites/cursor.png" id="2_msjdc"]
+[ext_resource type="Script" path="res://utilities/quick_animation.gd" id="3_e6cxa"]
+[ext_resource type="Texture2D" uid="uid://b52c1rcwsxs5u" path="res://sprites/cursor_h.png" id="3_p421x"]
+[ext_resource type="Texture2D" uid="uid://bb3h2t4py02cj" path="res://sprites/cursor_p.png" id="4_6ll8q"]
+[ext_resource type="Texture2D" uid="uid://cdsvkedavnntb" path="res://sprites/container.png" id="6_ghlax"]
+
+[sub_resource type="Resource" id="Resource_tcgvx"]
+script = ExtResource("3_e6cxa")
+sprites = Array[Texture2D]([ExtResource("2_msjdc")])
+fps = 8
+synchronous = false
+looping = false
+
+[node name="CursorWindow" type="CanvasLayer"]
+script = ExtResource("1_d0ij2")
+idle_sprite = ExtResource("3_p421x")
+interact_sprite = ExtResource("2_msjdc")
+click_sprite = ExtResource("4_6ll8q")
+wait_animation = SubResource("Resource_tcgvx")
+
+[node name="Tooltip" type="RichTextLabel" parent="."]
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(256, 96)
+offset_right = 255.0
+offset_bottom = 96.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][color=black]Name
+O:2
+[left][color=black]Description...
+...
+...
+...
+"
+scroll_active = false
+
+[node name="ColorRect" type="NinePatchRect" parent="Tooltip"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_ghlax")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="CursorSprite" type="TextureRect" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("2_msjdc")

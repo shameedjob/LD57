@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyTeamResource" load_steps=6 format=3 uid="uid://opqjcvwfmoe2"]
+
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="1_jxy3s"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_d2hp6"]
+[ext_resource type="Resource" uid="uid://owdfr0kjsglk" path="res://resources/units/023_kraken/unit_023_kraken.tres" id="3_rjg24"]
+[ext_resource type="Resource" uid="uid://cs8l8x6asbvlv" path="res://resources/units/008_betta/unit_008_betta.tres" id="4_t40sc"]
+[ext_resource type="Resource" uid="uid://gh6mkal4wjec" path="res://resources/units/002_swordfish/unit_002_swordfish.tres" id="5_bg2t4"]
+
+[resource]
+script = ExtResource("1_jxy3s")
+name = "Kraken"
+team = Array[ExtResource("2_d2hp6")]([ExtResource("3_rjg24"), ExtResource("4_t40sc"), ExtResource("4_t40sc"), ExtResource("5_bg2t4")])
+team_levels = Array[int]([1, 1, 1, 1])
+level_min = 9
+level_max = 9

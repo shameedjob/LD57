@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://b4acde3ihhvm6"]
+
+[ext_resource type="JSON" path="res://resources/units/011_starfish/starfish.json" id="1_nor1j"]
+[ext_resource type="Script" path="res://resources/units/011_starfish/starfish_resource.gd" id="2_hbstu"]
+[ext_resource type="Texture2D" uid="uid://bjnax2qccmfbd" path="res://resources/units/011_starfish/starfish.png" id="3_esk8h"]
+
+[resource]
+script = ExtResource("2_hbstu")
+name = &"Starfish"
+oxygen_cost = 2
+tier = 3
+data = ExtResource("1_nor1j")
+sprite = ExtResource("3_esk8h")
+level = 1
+edible = true
+description = "At start, increases all of your crews odds {chance_h} in {chance_t}."

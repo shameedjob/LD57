@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://x043j7pi1rjd"]
+
+[ext_resource type="JSON" path="res://resources/units/020_whale/whale.json" id="1_hbuup"]
+[ext_resource type="Script" path="res://resources/units/020_whale/whale_resource.gd" id="2_ja1io"]
+[ext_resource type="Texture2D" uid="uid://bbo38y3nccqvb" path="res://resources/units/020_whale/whale.png" id="3_xxkeb"]
+
+[resource]
+script = ExtResource("2_ja1io")
+name = &"Whale"
+oxygen_cost = 4
+tier = 4
+data = ExtResource("1_hbuup")
+sprite = ExtResource("3_xxkeb")
+level = 1
+edible = true
+description = "At game start, eats a random ally. Before death or game end, spit it out to gain {oxygen}(O)."
+eye_pos = Vector2(16, -6)

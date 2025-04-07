@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ma7q8gfdgrbh"]
+
+[ext_resource type="PackedScene" uid="uid://uf681n10fgsj" path="res://models/beffrey.glb" id="1_h1itk"]
+[ext_resource type="Texture2D" uid="uid://bk3trisu02c36" path="res://sprites/beffrey1.png" id="2_sf344"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aulce"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("2_sf344")
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[node name="beffrey" instance=ExtResource("1_h1itk")]
+
+[node name="Cube" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_aulce")
+cast_shadow = 0

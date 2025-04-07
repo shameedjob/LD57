@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://n26f4dktr5o0"]
+
+[ext_resource type="Script" path="res://scripts/inventory_item.gd" id="1_gvjw6"]
+[ext_resource type="Material" uid="uid://c1hpi54ggsfek" path="res://resources/scenes/inventory_item.tres" id="2_fqdfc"]
+[ext_resource type="Script" path="res://utilities/TooltipSub.gd" id="3_3q4ge"]
+[ext_resource type="Texture2D" uid="uid://dkam0ldblaamc" path="res://resources/units/023_kraken/kraken.png" id="3_fci8g"]
+[ext_resource type="Texture2D" uid="uid://ckgqy50ivp617" path="res://sprites/eyes.png" id="4_n36e6"]
+[ext_resource type="Script" path="res://utilities/CursorHoverSub.gd" id="5_i4wn2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xk2t7"]
+radius = 32.0
+
+[node name="InventoryItem" type="RigidBody2D"]
+physics_interpolation_mode = 1
+lock_rotation = true
+linear_damp = 1.0
+script = ExtResource("1_gvjw6")
+
+[node name="SelectArea" type="Area2D" parent="."]
+input_pickable = false
+priority = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xk2t7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_fqdfc")
+texture = ExtResource("3_fci8g")
+
+[node name="EyeSprite" type="Sprite2D" parent="Sprite2D"]
+use_parent_material = true
+texture = ExtResource("4_n36e6")
+
+[node name="TooltipSub" type="Node" parent="." node_paths=PackedStringArray("detection_area")]
+script = ExtResource("3_3q4ge")
+detection_area = NodePath("../SelectArea")
+
+[node name="CursorHoverSub" type="Node" parent="." node_paths=PackedStringArray("detection_area")]
+script = ExtResource("5_i4wn2")
+detection_area = NodePath("../SelectArea")
+
+[connection signal="mouse_entered" from="SelectArea" to="." method="_on_select_area_entered"]
+[connection signal="mouse_exited" from="SelectArea" to="." method="_on_select_area_exited"]

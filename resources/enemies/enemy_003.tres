@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyTeamResource" load_steps=4 format=3 uid="uid://bh0bdm536j705"]
+
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="1_pqbfw"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_gnlgw"]
+[ext_resource type="Resource" uid="uid://dl0oivlrqsqox" path="res://resources/units/010_hammerhead/unit_010_hammerhead.tres" id="3_8xo1f"]
+
+[resource]
+script = ExtResource("1_pqbfw")
+name = ""
+team = Array[ExtResource("2_gnlgw")]([ExtResource("3_8xo1f"), ExtResource("3_8xo1f")])
+team_levels = Array[int]([1, 1, 1, 1])
+level_min = 2
+level_max = 3

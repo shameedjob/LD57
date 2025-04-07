@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://nkjmyiaiitm0"]
+
+[ext_resource type="Script" path="res://resources/units/015_cuckoo_catfish/cuckoo_catfish_resource.gd" id="1_edqga"]
+[ext_resource type="Texture2D" uid="uid://djs8pcmy02ih" path="res://resources/units/015_cuckoo_catfish/c_catfish.png" id="2_fisil"]
+
+[resource]
+script = ExtResource("1_edqga")
+damage = 1
+chance_h = 1
+chance_t = 1
+name = &"Cuckoo Catfish"
+oxygen_cost = 5
+tier = 3
+sprite = ExtResource("2_fisil")
+level = 1
+edible = true
+description = "Each turn, if the enemy has an empty space, has a {chance_h} in {chance_t} chance to attack and switch crews."
+eye_pos = Vector2(16, -23)

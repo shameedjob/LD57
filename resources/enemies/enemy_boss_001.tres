@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyTeamResource" load_steps=7 format=3 uid="uid://j6jwl627oiib"]
+
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="1_huw2t"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_tidvp"]
+[ext_resource type="Resource" uid="uid://c5bvckb61cucq" path="res://resources/units/022_nessy/unit_022_nessy.tres" id="3_awswu"]
+[ext_resource type="Resource" uid="uid://duejk1ggfb6fg" path="res://resources/units/019_narwhal/unit_019_narwhal.tres" id="4_2r2it"]
+[ext_resource type="Resource" uid="uid://dbd48rr10seh2" path="res://resources/units/017_angler/unit_017_angler.tres" id="5_rnulo"]
+[ext_resource type="Resource" uid="uid://hrvq8ovnwquy" path="res://resources/units/016_angelfish/unit_016_angelfish.tres" id="6_m3yej"]
+
+[resource]
+script = ExtResource("1_huw2t")
+name = "The Lake Watchers"
+team = Array[ExtResource("2_tidvp")]([ExtResource("3_awswu"), ExtResource("4_2r2it"), ExtResource("5_rnulo"), ExtResource("6_m3yej")])
+team_levels = Array[int]([1, 1, 1, 1])
+level_min = 9
+level_max = 9

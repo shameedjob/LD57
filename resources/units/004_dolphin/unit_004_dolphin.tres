@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://rd5li52py55a"]
+
+[ext_resource type="Script" path="res://resources/units/004_dolphin/dolphin_resource.gd" id="1_fesou"]
+[ext_resource type="JSON" path="res://resources/units/004_dolphin/dolphin.json" id="1_i3vua"]
+[ext_resource type="Texture2D" uid="uid://c3aolq5dkhd8q" path="res://resources/units/004_dolphin/dolphin.png" id="2_bq2fb"]
+
+[resource]
+script = ExtResource("1_fesou")
+name = &"Dolphin"
+oxygen_cost = 2
+tier = 1
+data = ExtResource("1_i3vua")
+sprite = ExtResource("2_bq2fb")
+level = 1
+edible = true
+description = "Each turn, has a {chance_h} in {chance_t} chance to gain {oxygen}(O)"
+eye_pos = Vector2(11, -21)

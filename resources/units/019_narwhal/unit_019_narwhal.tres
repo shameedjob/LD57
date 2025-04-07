@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://duejk1ggfb6fg"]
+
+[ext_resource type="JSON" path="res://resources/units/019_narwhal/narwhal.json" id="1_axubd"]
+[ext_resource type="Script" path="res://resources/units/019_narwhal/narwhal_resource.gd" id="2_rfkd6"]
+[ext_resource type="Texture2D" uid="uid://capt145of3qif" path="res://resources/units/019_narwhal/narwhal.png" id="3_moula"]
+
+[resource]
+script = ExtResource("2_rfkd6")
+name = &"Narwhal"
+oxygen_cost = 3
+tier = 4
+data = ExtResource("1_axubd")
+sprite = ExtResource("3_moula")
+level = 1
+edible = true
+description = "Before death, dies and eats a random enemy to gain {oxygen}(O)."
+eye_pos = Vector2(5, -13)

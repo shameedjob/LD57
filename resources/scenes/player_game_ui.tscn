@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://hdrp5vwumx0a"]
+
+[ext_resource type="Theme" uid="uid://df4q2rjljwche" path="res://Theme.tres" id="1_t3wwm"]
+
+[node name="PlayerGameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Stats" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 105.0
+mouse_filter = 2
+
+[node name="CrewNameText" type="RichTextLabel" parent="Stats"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("1_t3wwm")
+bbcode_enabled = true
+text = "[font_size=36]Player"
+
+[node name="OxygenText" type="RichTextLabel" parent="Stats"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("1_t3wwm")
+bbcode_enabled = true
+text = "[font_size=24]100%[img width=36]sprites/bubble.png[/img]"
+
+[node name="ExtraView" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -40.0
+offset_right = 230.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="CrewText" type="RichTextLabel" parent="ExtraView"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][font_size=24]Crew: 0"
+
+[node name="BuckText" type="RichTextLabel" parent="ExtraView"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][font_size=24]$10"

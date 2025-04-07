@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ush8e1gx1iv1"]
+
+[ext_resource type="Script" path="res://resources/units/013_octopus/octopus_resource.gd" id="1_eqrtw"]
+[ext_resource type="JSON" path="res://resources/units/013_octopus/octopus.json" id="1_ni4d5"]
+[ext_resource type="Texture2D" uid="uid://dj423y21ac7nl" path="res://resources/units/013_octopus/octopus.png" id="2_ohtex"]
+
+[resource]
+script = ExtResource("1_eqrtw")
+name = &"Octopus"
+oxygen_cost = 3
+tier = 3
+data = ExtResource("1_ni4d5")
+sprite = ExtResource("2_ohtex")
+level = 1
+edible = true
+description = "Counts as having {count} of each name."
+eye_pos = Vector2(1, -8)

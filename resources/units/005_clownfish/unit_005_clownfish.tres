@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c0mej5ssg4drm"]
+
+[ext_resource type="Script" path="res://resources/units/005_clownfish/clownfish_crew_resource.gd" id="1_8h0tq"]
+[ext_resource type="JSON" path="res://resources/units/005_clownfish/clownfish.json" id="1_du7l1"]
+[ext_resource type="Texture2D" uid="uid://yduta6lnr1e" path="res://resources/units/005_clownfish/clownfish.png" id="3_qxeot"]
+
+[resource]
+script = ExtResource("1_8h0tq")
+name = &"Clownfish"
+oxygen_cost = 2
+tier = 1
+data = ExtResource("1_du7l1")
+sprite = ExtResource("3_qxeot")
+level = 1
+edible = true
+description = "Whenever your crew attacks, gain {oxygen}(O)"
+eye_pos = Vector2(17, -12)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyTeamResource" load_steps=6 format=3 uid="uid://b40ba0d6cu85a"]
+
+[ext_resource type="Script" path="res://scripts/enemy_team_resource.gd" id="1_siyur"]
+[ext_resource type="Script" path="res://scripts/crew_resource.gd" id="2_5sxw0"]
+[ext_resource type="Resource" uid="uid://buyimnsuil286" path="res://resources/units/012_pufferfish/unit_012_pufferfish.tres" id="3_oc3h2"]
+[ext_resource type="Resource" uid="uid://dticbxkgsslxy" path="res://resources/units/003_minnow/unit_003_minnow.tres" id="4_d5vyr"]
+[ext_resource type="Resource" uid="uid://dqunuw5xstwio" path="res://resources/units/021_hippocampus/unit_021_hippocampus.tres" id="5_qbosg"]
+
+[resource]
+script = ExtResource("1_siyur")
+name = "Ocean Rider"
+team = Array[ExtResource("2_5sxw0")]([ExtResource("3_oc3h2"), ExtResource("4_d5vyr"), ExtResource("4_d5vyr"), ExtResource("5_qbosg")])
+team_levels = Array[int]([1, 1, 1, 1])
+level_min = 9
+level_max = 9
